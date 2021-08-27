@@ -164,7 +164,7 @@ namespace log4net.Core
 		/// </remarks>
 		private static void RegisterAppDomainEvents()
 		{
-#if !NETCF && !NETSTANDARD
+#if !NETCF && !NETSTANDARD1_3 && !NETSTANDARD2_0
 			// ProcessExit seems to be fired if we are part of the default domain
 			AppDomain.CurrentDomain.ProcessExit += new EventHandler(OnProcessExit);
 
